@@ -7,8 +7,10 @@ interface Props {
 export default function FormField({ label, error, children }: Props) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-sm font-medium text-slate-700">{label}</label>
-      {children}
+      <label className="flex flex-col gap-1.5 text-sm font-medium text-slate-700">
+        {label}
+        {children}
+      </label>
       {error && <p className="text-xs text-red-600">{error}</p>}
     </div>
   )
